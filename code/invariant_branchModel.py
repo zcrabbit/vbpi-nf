@@ -8,6 +8,10 @@ import pdb
 
 
 class IndexedLinear(nn.Linear):
+    """
+    Implementation of permutation equivariant linear layers.
+    
+    """
     def __init__(self, in_features, out_features, bias=True):
         super().__init__(in_features, out_features, bias)
         self.in_features, self.out_features = in_features, out_features
@@ -29,6 +33,10 @@ class IndexedLinear(nn.Linear):
         
 
 class BatchIndexedLinear(nn.Linear):
+    """
+    Batched permutation equivariant linear layers
+    
+    """
     def __init__(self, in_features, out_features, bias=True):
         super().__init__(in_features, out_features, bias)
         self.in_features, self.out_features = in_features, out_features
@@ -58,6 +66,10 @@ class BatchIndexedLinear(nn.Linear):
 
         
 class IndexedMLP(nn.Module):
+    """
+    Implementation of permutation equivariant MLP.
+    
+    """
     def __init__(self, nin, hidden_sizes, nout, bias=True):
         super().__init__()
         self.nin, self.nout = nin, nout
@@ -84,6 +96,10 @@ class IndexedMLP(nn.Module):
         
 
 class BatchIndexedMLP(nn.Module):
+    """
+    Batched permutation equivariant MLP.
+    
+    """
     def __init__(self, nin, hidden_sizes, nout, bias=True):
         super().__init__()
         self.nin, self.nout = nin, nout

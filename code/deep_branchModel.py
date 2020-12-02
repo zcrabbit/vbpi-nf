@@ -43,6 +43,10 @@ class Identity(nn.Module):
         
 
 class PlanarNF(nn.Module):
+    """
+    Permutation equvariant Planar flows for phylogenentic models.
+    
+    """
     def __init__(self, ntips, embedding_dim, *args, num_of_layers_nf=16, **kwargs):
         super().__init__()
         
@@ -68,6 +72,10 @@ class PlanarNF(nn.Module):
 
 
 class RealNVP(nn.Module):
+    """
+    Permutation equivariant RealNVP for phylogenetic models.
+    
+    """
     def __init__(self, ntips, embedding_dim, padding_dim, hidden_sizes=[64], num_of_layers_nf=10, **kwargs):
         super().__init__()
                                         

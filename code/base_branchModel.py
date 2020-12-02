@@ -5,6 +5,17 @@ import math
 import pdb
 
 class BaseModel(nn.Module):
+    """
+    The base VBPI branch length model.
+    Use psp to turn on/off the primary subsplit pair (PSP) parameterization. The Default is true.
+    
+    Reference
+    ---------
+    .. [1] Cheng Zhang and Frederick A. Matsen IV. "Variational Bayesian Phylogenetic
+           Inference",  In Proceedings of the 7th International Conference on Learning
+           Representations (ICLR), 2019. (https://openreview.net/forum?id=SJVmjjR9FX)
+    
+    """
     def __init__(self, ntips, rootsplit_embedding_map, subsplit_embedding_map, psp=True, feature_dim=2, **kwargs):
         super().__init__()
         self.ntips = ntips

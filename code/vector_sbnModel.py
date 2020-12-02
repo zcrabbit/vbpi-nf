@@ -51,6 +51,18 @@ class ParamParser(object):
         
 
 class SBN(nn.Module):
+    """
+    Vectorized Subsplit Bayesian Networks (SBNs) Module.
+    
+    References
+    ----------
+    .. [1] Cheng Zhang and Frederick A. Matsen IV. "Generalizing Tree 
+    Probability Estimation via Bayesian Networks", Advances in Neural 
+    Information Processing Systems 32, 2018. (https://papers.nips.cc/
+    paper/7418-generalizing-tree-probability-estimation-via-bayesian-
+    networks)
+    
+    """
     def __init__(self, taxa, rootsplit_supp_dict, subsplit_supp_dict):
         super().__init__()
         self.taxa, self.ntaxa = taxa, len(taxa)
@@ -200,7 +212,12 @@ class SBN(nn.Module):
         return root        
         
 
-    def grab_subsplit_idxes(self, tree):       
+    def grab_subsplit_idxes(self, tree):
+        """
+        Traverse the tree topology to grab the indices for parent-child subsplit pairs (PCSPs).
+        This is a two-pass algorithm that enjoys a linear time complexity.
+        
+        """       
         for node in tree.traverse("postorder"):
             if not node.is_root():
                 node.leaf_to_root_subsplit_idxes = []
