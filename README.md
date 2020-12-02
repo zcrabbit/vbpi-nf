@@ -3,6 +3,10 @@ code for [improved variational Bayesian phylogenetic inference with normalizing 
 
 Please consider citing the paper when any of the material is used for your research.
 ```
-Cheng Zhang. Improved Variational Bayesian Phylogenetic Inference with Normalizing Flows. In NeurIPS, 2020.
-
+@incollection{VBPI-NF,
+title = {Improved Variational Bayesian Phylogenetic Inference with Normalizing Flows},
+author = {Zhang, Cheng},
+booktitle = {Arxiv arXiv:2012.00459},
+year = {2020},
+}
 ```
