@@ -3,11 +3,16 @@ Code for [Improved Variational Bayesian Phylogenetic Inference with Normalizing 
 
 Please consider citing the paper when any of the material is used for your research.
 ```
-@incollection{VBPI-NF,
-title = {Improved Variational Bayesian Phylogenetic Inference with Normalizing Flows},
-author = {Zhang, Cheng},
-booktitle = {Arxiv arXiv:2012.00459},
-year = {2020},
+@inproceedings{VBPI-NF,
+ author = {Zhang, Cheng},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {18760--18771},
+ publisher = {Curran Associates, Inc.},
+ title = {Improved Variational Bayesian Phylogenetic Inference with Normalizing Flows},
+ url = {https://proceedings.neurips.cc/paper/2020/file/d96409bf894217686ba124d7356686c9-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
 
